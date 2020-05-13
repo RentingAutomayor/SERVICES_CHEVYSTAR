@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCarsInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCarsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCarsInfoResult" type="tns:ArrayOfCarOnlinePosItemInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCarOnlinePosItemInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CarOnlinePosItemInfo" nillable="true" type="tns:CarOnlinePosItemInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CarOnlinePosItemInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Latitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Longitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Angle" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Color" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle_Tool_Tip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle_Label" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Drive_type" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="Event_Time" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vehicle_Online_Status" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGION_NAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginInfo" type="tns:LoginInfo" />
+      <s:complexType name="LoginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetCarsInfoNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCarsInfoNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCarsInfoNewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCarsInfoNewByGroupName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCarsInfoNewByGroupNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCarsInfoNewByGroupNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuthenticateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCarsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCarsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCarsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoLoginInfo">
+    <wsdl:part name="LoginInfo" element="tns:LoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCarsInfoNew" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCarsInfoNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewLoginInfo">
+    <wsdl:part name="LoginInfo" element="tns:LoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewByGroupNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCarsInfoNewByGroupName" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewByGroupNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCarsInfoNewByGroupNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsInfoNewByGroupNameLoginInfo">
+    <wsdl:part name="LoginInfo" element="tns:LoginInfo" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OnlineSoap">
+    <wsdl:operation name="GetCarsInfo">
+      <wsdl:input message="tns:GetCarsInfoSoapIn" />
+      <wsdl:output message="tns:GetCarsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNew">
+      <wsdl:input message="tns:GetCarsInfoNewSoapIn" />
+      <wsdl:output message="tns:GetCarsInfoNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNewByGroupName">
+      <wsdl:input message="tns:GetCarsInfoNewByGroupNameSoapIn" />
+      <wsdl:output message="tns:GetCarsInfoNewByGroupNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OnlineSoap" type="tns:OnlineSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCarsInfo">
+      <soap:operation soapAction="http://tempuri.org/GetCarsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCarsInfoLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNew">
+      <soap:operation soapAction="http://tempuri.org/GetCarsInfoNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCarsInfoNewLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNewByGroupName">
+      <soap:operation soapAction="http://tempuri.org/GetCarsInfoNewByGroupName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCarsInfoNewByGroupNameLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OnlineSoap12" type="tns:OnlineSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCarsInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetCarsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCarsInfoLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNew">
+      <soap12:operation soapAction="http://tempuri.org/GetCarsInfoNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCarsInfoNewLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarsInfoNewByGroupName">
+      <soap12:operation soapAction="http://tempuri.org/GetCarsInfoNewByGroupName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCarsInfoNewByGroupNameLoginInfo" part="LoginInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Online">
+    <wsdl:port name="OnlineSoap" binding="tns:OnlineSoap">
+      <soap:address location="https://worldfleetlog.com/WebFleetStationServices/Online.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OnlineSoap12" binding="tns:OnlineSoap12">
+      <soap12:address location="https://worldfleetlog.com/WebFleetStationServices/Online.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

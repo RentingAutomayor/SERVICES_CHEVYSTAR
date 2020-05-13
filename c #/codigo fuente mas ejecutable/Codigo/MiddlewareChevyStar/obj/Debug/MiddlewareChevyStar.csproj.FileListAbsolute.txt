@@ -1,0 +1,6 @@
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.exe.config
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.exe
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.pdb
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.csprojAssemblyReference.cache
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.exe
+A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.pdb
