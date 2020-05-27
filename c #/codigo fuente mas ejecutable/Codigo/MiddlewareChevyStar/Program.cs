@@ -122,7 +122,11 @@ namespace MiddlewareChevyStar
                             placa.ASSETNUM = item.Descendants(headNameSpace + "ASSETNUM").FirstOrDefault().Value;
                             placa.RAULTIMAMEDICION = 0; //Convert.ToDouble(item.Descendants(headNameSpace + "ASSETMETER").FirstOrDefault().Descendants(headNameSpace + "LASTREADING").FirstOrDefault().Value);
                             Console.WriteLine(placa.ASSETNUM);
+                            if (item.Descendants(headNameSpace + "ASSETMETER").FirstOrDefault() != null)
+                            {
                             Console.WriteLine(Convert.ToDouble(item.Descendants(headNameSpace + "ASSETMETER").FirstOrDefault().Descendants(headNameSpace + "LASTREADING").FirstOrDefault().Value));
+
+                            }
                             ASSETS.Add(placa);
                         }
                         Console.WriteLine("Proceso Ejecutado Satisfactoriamente");
@@ -422,7 +426,9 @@ namespace MiddlewareChevyStar
                             ConfigurationManager.AppSettings["credencialesMaximo"] +
                             "&ASSETNUM=" + item.ASSETNUM + "&METERNAME=" +
                             ConfigurationManager.AppSettings["MEDIDOR"] +
-                            "&NEWREADING=" + item.NEWREADING + "&SITEID=" + "RTAM");
+                            "&NEWREADING=" + item.NEWREADING.ToString().Replace('.', ',') + "&SITEID=" + "RTAM");
+                        
+                        //Console.WriteLine(item.NEWREADING.ToString().Replace('.', ','));
                         //ConfigurationManager.AppSettings["SITEID"]);
 
                         requestMaximo.Method = "POST";

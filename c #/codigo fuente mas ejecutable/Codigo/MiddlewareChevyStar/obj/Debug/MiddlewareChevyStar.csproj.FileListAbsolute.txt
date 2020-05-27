@@ -4,3 +4,10 @@ A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\bin\Debug\Mi
 A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.csprojAssemblyReference.cache
 A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.exe
 A:\Descargas\c #\MiddlewareChevyStar.exe\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.pdb
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.exe.config
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.exe
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\bin\Debug\MiddlewareChevyStar.pdb
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.csprojAssemblyReference.cache
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.exe
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.pdb
+A:\rentingpersonanatural\SERVICES_CHEVYSTAR\c #\codigo fuente mas ejecutable\Codigo\MiddlewareChevyStar\obj\Debug\MiddlewareChevyStar.csproj.CoreCompileInputs.cache
